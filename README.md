@@ -25,6 +25,8 @@ Click **Run sample incident** for an instant, safe demo with three synthetic fil
 - [Architecture and security boundaries](docs/ARCHITECTURE.md)
 - [Future OneDrive, SharePoint, and Teams integration](docs/FUTURE_INTEGRATIONS.md)
 - [Test cases and expected outcomes](docs/TEST_CASES.md)
+- [Dependencies and disclosure statement](docs/DISCLOSURES.md)
+- [Presentation deck](SecureScan_Portal_Presentation.pptx)
 
 ## Run locally
 

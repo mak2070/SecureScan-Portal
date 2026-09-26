@@ -1,11 +1,12 @@
 # Test Cases
 
-Use **Run sample incident** to show the first three cases safely.
+Use **Run sample incident** to show all five core cases safely.
 
 | Case | Input | Expected result |
 |---|---|---|
 | Safe document | `Q3_Finance_Summary.pdf` | Low risk; no urgent action |
-| Macro document | `Invoice_Review.docm` | Medium risk; isolate and review |
+| False-positive handling | `Urgent_HR_Policy.pdf` | Low risk with visible context; retain normal controls |
+| Deceptive executable | `Unreadable_Archive.bin` | Medium risk; review required without containment |
 | Deceptive executable | `Payment_Update.pdf.exe` | High risk; quarantine and alert |
 | Script file | Any `.js`, `.ps1`, or `.bat` file | High risk |
 | Suspicious text | Text file containing `powershell` or `cmd.exe` | Medium or High indicator shown |
