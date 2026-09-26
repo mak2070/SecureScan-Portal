@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SecureScan Portal - safe file triage demo" />
+    <title>SecureScan Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="topbar">
+        <div class="brand"><span class="logo">S</span><div><strong>SecureScan</strong><small data-i18n="portal">File Security Portal</small></div></div>
+        <div class="top-actions"><span class="system-status"><i></i><span data-i18n="protected">Protection engine ready</span></span><button id="languageButton" class="outline" type="button">العربية</button></div>
+      </header>
+
+      <section class="hero">
+        <div><p class="eyebrow" data-i18n="eyebrow">CYBER DEFENSE & THREAT RESPONSE</p><h1 data-i18n="title">Know which files are risky before they reach your company.</h1><p data-i18n="subtitle">Upload several files. SecureScan identifies high-risk file types, suspicious names, and unsafe text indicators, then creates an action-ready report.</p></div>
+        <div class="hero-card"><span data-i18n="scanStatus">Last scan</span><strong id="lastScan">Not started</strong><small data-i18n="localOnly">Files stay in this browser during the demo.</small></div>
+      </section>
+
+      <section class="stats" aria-label="Scan summary">
+        <article><span data-i18n="filesChecked">Files checked</span><strong id="filesChecked">0</strong></article>
+        <article><span data-i18n="highRisk">High risk</span><strong id="highRisk">0</strong></article>
+        <article><span data-i18n="review">Needs review</span><strong id="reviewCount">0</strong></article>
+        <article><span data-i18n="safe">Low risk</span><strong id="safeCount">0</strong></article>
+      </section>
+
+      <section class="layout">
+        <article class="panel upload-panel">
+          <p class="eyebrow" data-i18n="startScan">START A SCAN</p><h2 data-i18n="uploadTitle">Upload files for a security check</h2>
+          <label for="fileInput" class="drop-zone"><span class="upload-icon">↑</span><strong data-i18n="chooseFiles">Choose files</strong><span data-i18n="chooseHelp">or drag them here - multiple files supported</span><input id="fileInput" type="file" multiple /></label>
+          <p class="note" data-i18n="note">Demo scope: file name, type, size, and readable text are checked locally. Binary files are never executed.</p>
+          <div class="actions"><button id="scanButton" type="button" disabled data-i18n="scanFiles">Scan selected files</button><button id="clearButton" class="outline" type="button" data-i18n="clear">Clear</button></div>
+        </article>
+
+        <article class="panel playbook">
+          <p class="eyebrow" data-i18n="responsePlan">RESPONSE PLAN</p><h2 data-i18n="whenThreat">When SecureScan finds a threat</h2>
+          <ol id="playbook"></ol>
+          <div class="compliance"><strong data-i18n="auditReady">Audit-ready reports</strong><span data-i18n="auditText">Every scan can be exported for the security team.</span></div>
+        </article>
+      </section>
+
+      <section class="panel results-panel">
+        <div class="results-heading"><div><p class="eyebrow" data-i18n="scanResults">SCAN RESULTS</p><h2 data-i18n="priorityQueue">Priority queue</h2></div><button id="downloadButton" class="outline" type="button" disabled data-i18n="download">Download report</button></div>
+        <div id="emptyState" class="empty"><span>◌</span><p data-i18n="empty">Select files and run a scan to see the result.</p></div>
+        <div id="resultTable" class="table-wrap hidden"><table><thead><tr><th data-i18n="file">File</th><th data-i18n="findings">Findings</th><th data-i18n="risk">Risk</th><th data-i18n="action">Recommended action</th></tr></thead><tbody id="resultsBody"></tbody></table></div>
+      </section>
+    </main>
+    <footer data-i18n="footer">SecureScan Portal - AI Defense Lab 2026 - Synthetic demo only</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
