@@ -26,6 +26,22 @@
         <article><span data-i18n="safe">Low risk</span><strong id="safeCount">0</strong></article>
       </section>
 
+      <section class="operations">
+        <article class="panel source-panel">
+          <p class="eyebrow" data-i18n="sourcesEyebrow">INTAKE SOURCES</p>
+          <h2 data-i18n="sourcesTitle">Protected intake channels</h2>
+          <div class="source-list">
+            <div class="source-row"><span class="source-mark local">↥</span><div><strong data-i18n="localSource">Local upload</strong><small data-i18n="localSourceDetail">Active for this demo</small></div><span class="source-state active" data-i18n="active">Active</span></div>
+            <div class="source-row"><span class="source-mark cloud">◫</span><div><strong>OneDrive</strong><small data-i18n="cloudDetail">Secure integration ready</small></div><span class="source-state" data-i18n="planned">Planned</span></div>
+            <div class="source-row"><span class="source-mark cloud">◫</span><div><strong>SharePoint</strong><small data-i18n="cloudDetail">Secure integration ready</small></div><span class="source-state" data-i18n="planned">Planned</span></div>
+          </div>
+        </article>
+        <article class="panel activity-panel">
+          <div class="results-heading"><div><p class="eyebrow" data-i18n="activityEyebrow">SECURITY ACTIVITY</p><h2 data-i18n="activityTitle">Incident ledger</h2></div><span class="audit-badge" data-i18n="auditBadge">Audit trail</span></div>
+          <div id="activityFeed" class="activity-feed"></div>
+        </article>
+      </section>
+
       <section class="layout">
         <article class="panel upload-panel">
           <p class="eyebrow" data-i18n="startScan">START A SCAN</p><h2 data-i18n="uploadTitle">Upload files for a security check</h2>
@@ -42,9 +58,9 @@
       </section>
 
       <section class="panel results-panel">
-        <div class="results-heading"><div><p class="eyebrow" data-i18n="scanResults">SCAN RESULTS</p><h2 data-i18n="priorityQueue">Priority queue</h2></div><button id="downloadButton" class="outline" type="button" disabled data-i18n="download">Download report</button></div>
+        <div class="results-heading"><div><p class="eyebrow" data-i18n="scanResults">SCAN RESULTS</p><h2 data-i18n="priorityQueue">Priority queue</h2></div><div class="result-actions"><button id="quarantineButton" class="warning" type="button" disabled data-i18n="quarantineAll">Quarantine high-risk</button><button id="downloadButton" class="outline" type="button" disabled data-i18n="download">Download report</button></div></div>
         <div id="emptyState" class="empty"><span>◌</span><p data-i18n="empty">Select files and run a scan to see the result.</p></div>
-        <div id="resultTable" class="table-wrap hidden"><table><thead><tr><th data-i18n="file">File</th><th data-i18n="findings">Findings</th><th data-i18n="risk">Risk</th><th data-i18n="action">Recommended action</th></tr></thead><tbody id="resultsBody"></tbody></table></div>
+        <div id="resultTable" class="table-wrap hidden"><table><thead><tr><th data-i18n="file">File</th><th data-i18n="findings">Findings</th><th data-i18n="risk">Risk</th><th data-i18n="action">Recommended action</th><th data-i18n="status">Status</th></tr></thead><tbody id="resultsBody"></tbody></table></div>
       </section>
     </main>
     <footer data-i18n="footer">SecureScan Portal - AI Defense Lab 2026 - Synthetic demo only</footer>
